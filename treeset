@@ -1,0 +1,52 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		TreeSet<String> ob=new TreeSet<String>();
+		ob.add("D");
+		ob.add("B");
+		ob.add("C");
+		ob.add("A");
+		ob.add("E");
+			System.out.println("orginal set : "+ob);//sorted order
+
+		System.out.println("Contains :" +ob.contains("E"));
+			System.out.println("First(least) :"+ob.first());
+				System.out.println("Last(high) :"+ob.last());
+					System.out.println("headSet(< C) :"+ob.headSet("C"));
+						System.out.println("tailSet(>=C) :"+ob.tailSet("C"));
+							System.out.println("tailset with boolean false (>C) :"+ob.tailSet("C",false));
+						System.out.println("headset with boolean true(<=C) :"+ob.headSet("C",true));
+						
+						System.out.println("subset with from and to (C,E) :"+ob.subSet("C","E"));
+						System.out.println("subset with navigableset(A to E)"+ob.subSet("A",false,"E",true));
+					System.out.println("return and remove least value (pollFirst) :"+ob.pollFirst());
+						System.out.println("return and remove high value (pollLast) :"+ob.pollLast());
+							System.out.println("orginal set :"+ob);
+								System.out.println("descending order:"+ob.descendingSet());
+								
+					System.out.println("return > value :"+ob.higher("C"));
+						System.out.println("return < value :"+ob.lower("C"));
+							System.out.println("return >= value :"+ob.ceiling("C"));
+								System.out.println("return <= value :"+ob.floor("C"));
+								System.out.print("Ascending order :");
+								Iterator it=ob.iterator();
+								while(it.hasNext())
+								System.out.print(it.next()+" ");
+								System.out.println();
+							
+								Iterator it2=ob.descendingIterator();
+								System.out.print("descending order :");
+								while(it2.hasNext())
+								System.out.print(it2.next()+" ");
+									System.out.println("is empty : "+ob.isEmpty());
+									System.out.println("size : "+ob.size());
+									System.out.println("remove E : "+ob.remove("E"));
+									System.out.println("remove D : "+ob.remove("D"));
+									System.out.println("set values after remove : "+ob);
+
+									
+	}
+}
